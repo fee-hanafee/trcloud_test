@@ -43,7 +43,28 @@ export default function Page() {
       const index = findIndex(input);
       for (let i in input) {
         if (i !== index) {
-          const result = findValue(+input[index], +percents[index], +percents[i]);
+          let result = findValue(+input[index], +percents[index], +percents[i]);
+
+          // let countOne = 0;
+          // let countNine = 0;
+          // let value = "" + result;
+          // for (let j = 0; j < value.length; j++) {
+          //   if (value[j] == 0) {
+          //     countOne++;
+          //   }
+          //   if (value[j] == 9) {
+          //     countNine++;
+          //   }
+          // }
+
+          // if ((countOne >= 12 || countNine >= 12) && result > 0) {
+          //   result = result.toFixed(2);
+          //   let test = "" + result;
+          //   if (+test.split(".")[1] == 0) {
+          //     result = parseInt(result).toFixed(0)
+          //   }
+          // }
+
           setInput((prevInput) => ({ ...prevInput, [i]: result }));
         }
       }

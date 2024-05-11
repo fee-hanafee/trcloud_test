@@ -4,8 +4,8 @@ import ArrForm from "./component/ArrForm";
 export default function page() {
   const arr1 = [
     { code: 101, name: "AAA" },
-    { code: 103, name: "BBB" },
-    { code: 102, name: "CCC" },
+    { code: 102, name: "BBB" },
+    { code: 103, name: "CCC" },
   ];
 
   const arr2 = [
