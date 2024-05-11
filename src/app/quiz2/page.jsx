@@ -25,9 +25,8 @@ export default function Page() {
     setInput({ ...input, [e.target.name]: e.target.value });
   };
   const findValue = (value, percent, percentTarget) => {
-    const result = (percentTarget / percent) * value;
-    const finalResult = (result.toFixed(5) * 100) / 100;
-    return finalResult;
+    const result = (percentTarget * value) / percent;
+    return result;
   };
 
   const findIndex = (value) => {
@@ -46,7 +45,6 @@ export default function Page() {
       for (let i in input) {
         if (i !== index) {
           let result = findValue(+input[index], +percents[index], +percents[i]);
-
           setInput((prevInput) => ({ ...prevInput, [i]: result }));
         }
       }
