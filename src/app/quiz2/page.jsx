@@ -26,7 +26,8 @@ export default function Page() {
   };
   const findValue = (value, percent, percentTarget) => {
     const result = (percentTarget * value) / percent;
-    return result;
+    const finalResult = Math.round(result * 1e12) / 1e12
+    return finalResult;
   };
 
   const findIndex = (value) => {
